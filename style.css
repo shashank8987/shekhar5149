@@ -290,6 +290,7 @@ header .navbar ul li a:hover{
 }
 
 .portfolio .box-container .box{
+    position: relative;
     height: 20rem;
     width: 26rem;
     border-radius: 1rem;
@@ -304,7 +305,44 @@ header .navbar ul li a:hover{
     object-fit: cover;
 }
 
+.portfolio .box-container .box .content {
+    opacity: 0;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(182, 28, 28, 0.745);
+    width: 300px;
+    height: 300px;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+  }
 
+  .portfolio .box-container .box .content:hover {
+    opacity: 1;
+  }
+  .portfolio .box-container .box .content .text {
+    height: 0;
+    margin-right: 20%;
+    font-size: medium;
+    margin-top: 5%;
+    opacity: 0;
+    transition-delay: 0.1s;
+    /* transition-duration: 0.4s; */
+  }
+  .portfolio .box-container .box .content:hover .text {
+    opacity: 1;
+    transform: translateY(10%);
+    -webkit-transform: translateY(10%);
+  }
+
+/* .portfolio .box-container .box:hover{
+    
+} */
 
 .portfolio .box-container .box:hover img{
     transform: scale(1.2);
